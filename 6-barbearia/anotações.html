@@ -1,0 +1,465 @@
+tipo do documento:
+<!DOCTYPE html>
+referencia arquivo css:
+<link rel="stylesheet" href="style.css">
+add imagem:
+<img id="banner" src="banner.jpg">
+div = divisões
+cria a classe no html:
+<div class="principal">
+referencia a classe no css:
+.principal {
+	background: #CCCCCC;
+	padding: 30px;
+}
+cria id: (USAR CLASSES MAJORITARIAMENTE)
+<p id="missao">
+referencia id no css:
+#missao {
+	font-size: 20px;
+}
+marcar uma tag no css:
+p {
+	text-align: center;
+}
+li = list
+ul = unordered lis ol = ordered list
+como tranformar item da lista em um link: tag anchor = tag a?
+<a href="index.html"></a>
+como add pagina externa ao link:
+<a href="http://www.google.com">
+maiuscula:
+text-transform: uppercase;
+reset css:
+<link rel="stylesheet" href="reset.css"> arquivo que limpa tudo que o navegador cria
+position static = ponto inicial do bloco da página
+position relative = distância relativa ao ponto inicial
+position absolute = para mudar a posição do ponto inicial que ele se encontra(permite começar a manipular a posição)
+position top = leva o bloco 100% pra cima (msm padrão right left...)
+melhor técnica para alinhar uma div ao centro:
+Usar o cálculo da margin automático
+como add varios elementos:
+<main>
+		<ul class="produtos">
+			<li>
+				<h2>Cabelo</h2>
+				<img src="cabelo.jpg">
+				<p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir</p>
+				<p class="produto-preco">R$ 25,00</p>
+			</li>
+			<li>
+				<h2>Barba</h2>
+				<img src="barba.jpg">
+				<p class="produto-descricao">Corte e desenho profissional de barba</p>
+				<p class="produto-preco">R$ 18,00</p>
+		</li>
+		<li>
+			<h2>Cabelo + Barba</h2>
+				<img src="cabelo+barba.jpg">
+				<p class="produto-descricao">Pacote completo de cabelo e barba</p>
+				<p class="produto-preco">R$ 35,00</p>
+		</li>
+		</ul>
+	</main>
+Qual o comportamento do elemento quando adiciono espaçamento interno, o padding?
+O elemento aumenta o seu tamanho
+Alternativa correta! O elemento aumenta o seu tamanho. Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo.
+border radius:
+arredonda toda a pagina
+hover:
+qnd mouse estiver por cima dos menus de navegação
+Em quais elementos consigo alterar o seu visual através do seu comportamento com CSS?
+Todos os elementos
+Alternativa correta! Em todos os elementos do HTML consigo mapear o comportamento com CSS e alterar o visual do elemento.
+Algumas pseudo-classes CSS:
+hover, quando o usuário passa o cursor sobre o elemento
+active, quando um elemento está sendo ativado pelo usuário
+como adicionar imagem ao plano de fundo:
+background: url("");
+Como adicionamos uma imagem de fundo em um elemento?
+Com o valor url no background do elemento
+Alternativa correta! No CSS, ao referenciarmos o endereço de uma imagem, usamos o valor url.
+Que tipos de caracteres especiais podemos usar no nosso texto?
+Podemos usar qualquer caractere do Unicode
+Alternativa correta! Os caracteres Unicode estão disponíveis para serem usados como um complemento ao nosso texto.
+A tag footer, para o rodapé da nossa página
+Que, com CSS, podemos colocar uma imagem de fundo em um elemento
+Quando colocamos uma imagem de fundo em um elemento, o CSS, por padrão, copia e cola a imagem diversas vezes até ocupar todo o espaço do elemento
+A tabela Unicode
+Normalmente os browsers especificam o tamanho default da fonte do elemento root (raiz) sendo 16px:
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem
+18px = 1.125rem
+
+html{
+    font-size: 62,5%;
+}
+
+h1{
+    font-size: 1.2rem;  /*equivalente a 12px*/
+}
+
+p{
+    font-size: 2.4rem; /*equivalente a 24px*/
+}
+Repare que dessa forma, o valor em píxel será sempre o valor definido em rem vezes 10! Fica mais conveniente, concorda?
+
+Apesar de parecer uma boa ideia, devemos ter cuidado com essas abordagens, uma vez que ela forçará que você reescreva todos os font-size do seu site, então tome cuidado!
+formulario(input de info):
+<form><input type="" name=""></form> 
+
+<label for="telefone">Telefone</label>
+				<input type="text" id="telefone">
+
+				<input type="submit"> envia a info e cria um botao de enviar
+Qual propriedade devo alterar para que os meus <input> tenham um espaço entre a borda e o conteúdo?
+
+Alternativa correta
+padding
+
+
+Alternativa correta! A propriedade padding serve para alterarmos o espaçamento interno, entre o conteúdo e a borda.
+A criar um formulário HTML
+A tag que o representa é a <form>
+A tag <input>, para a entrada de dados do usuário
+A criar uma etiqueta para o input, com a tag <label>
+A conectar um input com o seu label
+Colocamos um id para o input e associamos esse id ao atributo for do label
+Alguns tipos de input, como text e submit
+Que label possui o display inline e o input possui display inline-block
+Qual a propriedade de um input do tipo radio que preciso criar para que eles façam parte do mesmo grupo?
+name
+Alguns tipos de inputs para celular: email, tel, number, password, date, datetime, month e search
+Como não permitir que um campo não seja preenchido, através do atributo required
+Como exibir uma sugestão de preenchimento para os campos, através do atributo placeholder
+Como deixar uma opção marcada por padrão nos nossos input radio e checkbox, através do atributo checked
+Como estruturar melhor o nosso código com fieldset e legend
+Como adicionar uma alternativa à imagem, descrevendo-a, com o atributo alt
+
+Alternativa correta! A propriedade name só pode ser "preenchida" uma única vez, por isso que, quando eu seleciono um dos itens, ele desmarca o outro, mantendo somente um selecionado.
+Qual a melhor abordagem quando temos uma configuração de CSS aplicada para um item e queremos replicar ela para um item parecido?
+O textarea, para entradas de texto de mais de uma linha
+O input do tipo radio
+Como agrupar vários input do tipo radio, impedindo que mais de um input seja selecionado
+O input do tipo checkbox
+Que podemos criar um input dentro de um label, assim associando-os
+Mais estilizações para a nossa página
+Como funciona a hierarquia no CSS
+O select, que é seletor, um campo de seleção de um item, e o option, que representa cada opção do seletor
+inputs para celulares:
+mobileinput.com
+Como estilizar o botão de envio de formulário
+A realizar transições nos nossos elementos, com a propriedade CSS transition
+A modificar o estilo do ponteiro do mouse, quando passar por cima de determinado elemento, através da propriedade CSS cursor
+A realizar transformações nos nossos elementos, como aumentar proporcionalmente a escala de determinado elemento ou rotacioná-lo, através da propriedade CSS transform
+A criar uma tabela HTML
+A tag table, que representa a tabela
+A tag tr, que representa a linha da tabela
+A tag td, que representa a célula da tabela
+A tag thead, que representa o cabeçalho da tabela
+A tag tbody, que representa o corpo da tabela
+A tag th, que representa a célula do cabeçalho da tabela
+A tag tfoot, que representa o rodapé da tabela
+A estilizar a tabela
+Qual a diferença entre usar uma <div> ou uma <section>?
+
+Alternativa correta
+Só devemos usar <section> quando o bloco for semântico
+
+
+Alternativa correta! Para um bloco onde o conteúdo tenha o mesmo significado, o mesmo sentido, usamos uma <section>.
+/* comentário */ : no css
+Ao criar um estilo qualquer, qual o melhor padrão para marcar o nosso conteúdo, ao criar uma classe?
+Ser específico e genérico ao mesmo tempo
+
+
+Alternativa correta! Um balanço é a melhor alternativa. Nem tão específica, para poder repetir as classes, e nem tão genérica, para poder não precisar combinar classes.
+Para quê serve a propriedade float?
+Descolar o elemento na lateral e deixar os outros elementos ao redor
+
+
+Alternativa correta! Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele
+Nesta aula, aprendemos:
+
+A ajustar a página principal para utilizar os mesmos padrões da página de produtos
+Medidas proporcionais com CSS
+Como funciona a flutuação dos elementos e como modificá-la, com a propriedade float do CSS
+Como limpar o float, com a propriedade clear do CSS
+Pegar fontes no google fonts ou qlq outro site
+<iframe src=""></iframe>: permite que adicione mapas ou qlq oyutra midia(videos e etc...)
+Nesta aula, aprendemos:
+
+A utilizar fontes externas nas nossas páginas
+Como incorporar um mapa à nossa página
+Como incorporar um vídeo à nossa página
+Incluiremos a classe itens em style.css. Feito isso, adicionaremos a propriedade line-height para definir o espaçamento entre as linhas, proporcional ao tamanho das fontes. Neste caso colocaermos o tamanho da fonte, mais 50%.
+
+.itens {
+    line-height: 1.5;
+}COPIAR CÓDIGO
+A próxima etapa é negritar o primeiro item da lista. Antigamente, a única possibilidade de realizar esse tipo de operação era criar classes específicas para uma alteração que deveria ser no CSS. Hoje em dia com as atualizações e melhorias do CSS, temos os já mencionados pseudo-elementos.
+
+itens: first-child {
+    font-weight: bold;
+}
+Para seleção de elementos específicos temos três opções: a primeira delas é utilizar uma classe pseudo-elemento first-child. Temos seis itens que são irmãos nos itens da lista, e as alteração serão feitas no primeiro item. Escreveremos que o peso da fonte será em negrito.
+
+itens: first-child {
+    font-weight: bold;
+}COPIAR CÓDIGO
+Dessa maneira, o primeiro item estará em negrito ao carregarmos o navegador. Dessa maneira criamos, via CSS, uma marcação. Além do first-child, temos a opção last-child que marcará o último item da lista. Isso é interessante, porque não precisaremos mais saber quantos itens existem na lista para passar configurações precisas, essa caracaterística é muito útil em manipulação de tabelas, por exemplo.
+
+Por fim, temos a possibilidade de selecionar qualquer elemento da lista por via do nth-child(), que receberá o número que quisermos, como por exemplo 4, que se refere ao quarto elemento da lista. Podemos ainda utilizar valores como 2n com o nth-child(), o que quer dizer marcamos todos os elementos pares da lista, isto é, o segundo, quarto e sexto elemento da lista ficam em negrito.
+Precisamos aqui ajustar a transição da cor branca para o cinza, então utilizaremos o linear-gradient() que receberá as cores que desejamos trabalhar. O interessante dessa propriedade é que podemos adiciconar quantas cores quisermos, que o CSS irá administrá-las automaticamente. É possível, inclusive, ajustar a inclinação das cores, por exemplo 45deg e então ficarão posicionadas em 45º.
+
+.mapa {
+    padding:3em 0;
+    background: linear-gradient(45deg, orange, blue, red, black);
+}COPIAR CÓDIGO
+Como estamos utilizando quatro cores no exemplo, há valores subentendidos em cada uma delas, na sequência: 0%, 25%, 50%, e 75% para a última cor da sequência. Mas podemos manipular esses valores de acordo com nosso interesse , como definir que orange, por exemplo, terá o valor de 50%.
+
+.mapa {
+    padding:3em 0;
+    background: linear-gradient(45deg, orange 50%, blue, red, black);
+}COPIAR CÓDIGO
+Além do degradê linear(linear-gradient) temos ainda a opção radial(radial-gradient), que organiza a transição de cores de maneira circular. Nosso site terá uma gradação de cinza linear
+
+.mapa {
+    padding:3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+}COPIAR CÓDIGO
+Temos em nosso site um belo efeito visual em escala de cinza!
+Como fazer um degradê de cinco cores em um elemento?
+
+Alternativa correta
+background: linear-gradient(gray, yellow, red, orange, blue)
+
+Alternativa correta! Usamos dentro do mesmo parênteses, separando as cores por vírgulas.
+Evoluiremos ainda mais em nosso entendimento do CSS, e um dos tópicos do nosso estudo serão os já referidos pseudo-elementos, que não existem no código HTML e são criados via CSS.
+
+Utilizaremos o título "Nosso estabelecimento" para entendermos as possibilidades do CSS. Se quisermos negritar apenas a primeira letra desse título? Com os conhecimentos que temos até agora, isso seria possível?
+
+Não, pois estudamos seletores avançados de classe, identificadores, mas nada que possibilitasse a marcação de uma única letra. Contudo, essa é uma ação possível graças às atualizações e melhorias no CSS. Na tag titulo-principal, utilizaremos o pseudo-elemento first-letter para definir o peso da fonte.
+
+.titulo-principal {
+    text-align: center;
+    font-size: em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.titulo-principal:first-letter {
+    font-weight: bold;
+}COPIAR CÓDIGO
+Ao carregarmos a página, teremos a primeira letra do título "Nosso estabelecimento" em negrito, isto é, a letra "N". Outra opção interessante, muito comum no mercado editorial, é configurar a primeira linha para itálico. Para tanto, ajustamos para que todos os parágrafos (p) terão a primeira linha (first-line) no estilo italic.
+
+p:first-line {
+    font-style: italic;
+}COPIAR CÓDIGO
+Conheceremos ainda outros dois pseudo-elementos do CSS: after e before. Esses dois elementos criam espaço para que o CSS atue antes ou depois de um determinado conteúdo. Continuaremos utilizando o título para entender como a sintaxe se dá:
+
+.titulo-principal:before {
+    content: "[";
+}
+
+.titulo-principal:after {
+    content:"]"
+}COPIAR CÓDIGO
+Dessa maneira, ao recarregarmos a página o título estará envolvido por colchetes: "[Nosso estabelecimento]". É interessante mencionar que esse conteúdo - os colchetes - não são selecionáveis pelo mouse, trata-se apenas de uma informação visual e não um conteúdo manipulável. Utilizaremos os caracteres unicode para inserir estrelas na lista da sessão "Benefícios", que trabalhávamos na aula anterior.
+
+Procuraremos no Google por "unicode star" e copiaremos o conteúdo da estrela que acharmos visualmente mais interessante. Em nosso CSS, trabalharemos na classe itens, utilizaremos o pseudo-elemento before para que antes do conteúdo da lista, haja uma estrela.
+
+itens:before {
+    content: ""
+}COPIAR CÓDIGO
+Ao carregarmos a página, teremos as estrelas marcadas em cada item da lista. Novamente trata-se de um elemento não selecionável, apenas conteúdo de exibição.
+Como criar um elemento no HTML antes do meu item, através do CSS?
+Com a propriedade :before
+
+
+Alternativa correta! Quando queremos criar um elemento na página, via CSS, antes do elemento do HTML, usamos a propriedade :before.
+Nesta aula, aprendemos:
+
+A melhorar mais ainda a semântica da página principal, com novas divisões, classes, etc
+Novas pseudo-classes
+Como aplicar um background gradiente na página
+Pseudo-elementos
+No CSS, como fazemos para marcar esse parágrafo de vermelho? Podemos tentar escrever:
+
+main p {
+    background: red;
+}COPIAR CÓDIGO
+Ao carregarmos no navegador, veremos que todos os parágrafos estarão marcados de vermelho, pois coletamos os parágrafos que estavam dentro da <section>, afinal coletamos todos os parágrafos que estão dentro da <main>. Como podemos selecionar um parágrafo de maneira individual?
+
+Com os seletores avançados do CSS,podemos selecionar os filhos diretos de <main>, para tanto, utilizaremos o sinal >, e todo os outros parágrafos serão ignorados, afinal são filhos diretos da <section> e não de <main>.
+
+main > p {
+    background: red; 
+}COPIAR CÓDIGO
+Mas como selecionar o primeiro parágrafo que sucede uma imagem, por exemplo? Conseguimos selecionar o primeiro filho com o seletor que acabamos de conhecer, mas neste caso estamos falando do primeiro irmão que vem depois de um elemento.
+
+Neste caso, usamos img como elemento âncora e para o primeiro irmão usamos o sinal de "+"
+
+img + p { 
+    balckground: blue;COPIAR CÓDIGO
+Para selecionar todos os parágrafos localizados depois de uma imagem usamos o seletor ~
+
+img ~ p {
+    background: yellow
+} COPIAR CÓDIGO
+É importante lembrar que um seletor pode sobrescrever o outro, pois todos possuem a mesma força. Os seletores avançados nos ajudam a criar estilos mais complexos e utilizar o CSS de uma maneira incrível, com uma autonomia maior do HTML.
+
+No CSS podemos, inclusive, excluir itens específicos. Se quisermos excluir todos os parágrafos que não compõe missao, escreveremos:
+
+.principal p:not(#missao) {
+    background: orange;
+}COPIAR CÓDIGO
+A exclusão é um elemento poderoso no CSS, principalmente quando realizamos manutenção em algum código que já existe e que não devemos modificar tanto o HTML.
+Usando essa estrutura:
+
+<h2>
+<section>
+    <h2>
+    <p>
+    </p>
+    <h2>COPIAR CÓDIGO
+Como fazemos para selecionar o último <h2>?
+section > p + h2
+
+Alternativa correta! O último h2 é filho direto da section e irmão do p.
+
+Nosso site deve estar preparado para dispositivos com diversos tamanhos de tela. Um grande problema enfrentado ao desenvolver um site harmonioso é justamente calcular a proporção s dimensões dos elementos em diferentes dispositivos.
+
+Clicaremos sobre a imagem de utensílios de barbeiro com o botão direito do mouse, então selecionaremos a opção "Inspecionar" para acessarmos a ferramenta do desenvolvedor.
+
+Em nosso CSS, verificaremos que o tamanho da imagem é de 120px, mas como podemos fazer com que esse tamanho seja proporcional? Basta mudar para percentual, isto é, 20% de largura tendo a tela como referência.
+
+Para que a imagem sempre ocupe a medida correta em outros dispositivos, utilizamos a propriedade calc. O calculo que desejamos realizar é escrito entre parênteses, em que inserimos o primeiro valor, o tipo de operção e o resultado esperado.
+
+.utensilios {
+    width: calc(40% - 26px);
+    float: left;
+    Margin: 0 20px 20px 
+
+}COPIAR CÓDIGO
+Dessa forma, foi calculado precisamente 350px de largura para este elemento. É possível encadear quantas operações quisermos, no mesmo modelo de sintaxe.
+
+.utensilios {
+    width: calc(40% - (26px * 4);
+    float: left;
+    Margin: 0 20px 20px 
+
+}COPIAR CÓDIGO
+A propriedade calc nos dá o poder de fazer com o que cremos valores proporcionais específicos.
+Como usar as medidas proporcionais para deixar um elemento de 100% de largura com o equivalente a um terço do elemento pai, menos 10px?
+width: calc( 33% - 10px )
+
+Alternativa correta! Essa é a forma mais direta!
+Nesta aula, aprendemos:
+
+Seletores avançados CSS
+Seletor >, para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os p dentro de main:
+main > p {
+}COPIAR CÓDIGO
+Seletor +, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro p após um img:
+img + p {
+}COPIAR CÓDIGO
+Seletor ~, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os p após um img:
+img ~ p {
+}COPIAR CÓDIGO
+Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+main p:not(#missao) {
+}COPIAR CÓDIGO
+Como fazer contas com CSS, com a propriedade calc
+Utilizaremos a imagem da sessão "Benefícios" para compreendermos o funcionamento da ferramenta de opacidade no HTML. Em index.css , utilizaremos a propriedade opacity que pode ter valores entre 0 a 1, sendo que 0 o elemento estará totalmente oculto. Se quisermos exibir a imagem com opacidade de 30%, ajustaremos o valor da propriedade para 0.3.
+
+.imagem-beneficios {
+    width: 60%
+    opacity: 0.3;
+}COPIAR CÓDIGO
+Esse recurso é interessante quando montamos composições visuais com elementos sobrepostos, ou para sugerir interações com o mouse ao utilizarmos o hover. Quando o mouse estiver posicionado sobre a imagem teremos 1 de opacidade.
+
+.imagem-beneficios:hover {
+    opacity: 1;
+}COPIAR CÓDIGO
+Temos ainda o recurso transition, em que podemos estabelecer uma transição da opacidade em determinados milissegundos.
+
+.imagem-beneficios {
+    width: 60%
+    opacity: 0.3;
+    transition: 400ms;
+}COPIAR CÓDIGO
+Em nosso site, faremos com o que o comportamento padrão da imagem seja de opacidade 1, e no momento em que mouse estiver sobre ela a opacidade será de 0.3, o que irá gerar um belo efeito visual.
+
+Atualmente, podemos utilizar opacidade em todos os elementos e em cores, vamos entender melhor como isso ocorre.
+
+A cor de titulo-principal possui a cor padrão #00000, preto. Como podemos fazer com que essa cor que está em hexadecimal? se torne RGB? Isto é, a mesma cor escrita em outra linguagem? Do seguinte modo:
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    color: rgb(0,0,0);
+}COPIAR CÓDIGO
+Com CSS 3, podemos utilizar mais uma camada - a de opacidade, chamada alfa - nas cores em RGB. Para tanto, utilizamos o rgbae então definir os valores que quisermos.
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    color: rgb(0,0,0,0.3);
+}COPIAR CÓDIGO
+Esse recurso pode ser utilizado em todas as cores: de fundo, texto, borda e assim por diante.
+Como fazer uma sombra interna em um elemento?
+
+Alternativa correta
+box-shadow: -3px -3px 5px black;
+box-shadow: inset 0 0 5px black;
+
+Alternativa correta! Sombra interna, preta, com 5px de espalhamento.
+Nesta aula, aprendemos:
+
+Como manipular a opacidade dos elementos, com a propriedade CSS opacity
+Como manipular a opacidade das cores
+Como adicionar um sombreamento em volta dos elementos, com a propriedade CSS box-shadow
+Como adicionar um sombreamento em textos, com a propriedade CSS text-shadowPara testarmos a usabilidade do site, abriremos a ferramenta do desenvolvedor por meio do atalho "Ctrl + Shift + I" . No painel de ferramentas, teremos um ícone que representa tablets e celulares, a "Toggle device toolbar" , que também pode ser acessada pelo atalho "Ctrl + Shift + M".
+
+ferramenta do de
+
+No momento em que habilitamos essa opção, nosso site passa a se comportar como se estivesse sendo visualizado via celular: o conteúdo é compartimentando em 940px, o mínimo para esse tipo de plataforma. Atualmente, temos alguns problemas nesse tipo de visualização: a logo marcar está pequena,o menu está pouco legível assim como o conteúdo da lista de benefícios.
+Primeriamente, precisamos compreender quantos pixels existem na tela para trabalhamos em uma melhor exibição. Atualmente, nossa tela se adapte ao tamanho disponibilizado pelo navegador, sendo o mínimo 940px. No caso de celulares o panorama é diferente: mesmo que a resolução do dispositivo seja de 2000px de largura, a quantidade de pixels existentes na tela sempre será diferente. Esses valores são chamados de DPI, isto é, a densidade de pixels por polegada.
+
+Geralmente, os celulares possuem 320px de largura de tela,alguns maiores oscilam entre 350px e 480px. Portanto se o mínimo é 940px, teremos um valor discrepante. Uma informação crucial é saber quantos pixels possui a tela do usuário.
+
+Trabalharemos com uma nova tag <meta>, mas dessa vez com propriedade e valor name="viewport" embutidas. Queremos, ainda, saber a largura do dispositivo, e para isso usaremos a propriedade content com o valor width=device-width.
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Barbearia Alura</title>
+    <link rel="stylesheet" href="style-home.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>COPIAR CÓDIGO
+Ao reabrirmos o navegador, veremos que o site se comporta de maneira diferente. A forma como os elementos etão distribuídos em relação ao fundo, o conteúdo é de 940px, mas a visualização mobile é de 375px, que corresponde a um IphoneX. Na pare superior da tela ainda podemos rotacionar a tela para horizontal e ver como a página se comporta.
+Precisaremos, então, adaptar o CSS para que ele funcione nessa tela. Precisamos entregar para telas até 450px um estilo diferente, e faremos isso por meio de media queries. Perguntaremos ao navegador qual é o tamanho da tela em questão e, se for aquele que desejamos, entregaremos o estilo correto.
+
+Para realizar isso, utilizaremos o @media, com o valor do tipo de tela screen e a pesquisa. Todas as telas que tenham até 450, terão esse estilo diferente, reescrito. Para exempliciar, colocaremos no background um estilo da cor vermelha.
+
+
+@media screen and (max-width: 480px) {
+    body {
+        background: red;
+    }
+}
+Como marcar um elemento para que ele seja apresentado de outra forma, em uma tela de até 480px?
+Dentro do @media (max-width: 480px) {}
+
+
+Alternativa correta! É dentro dessa media query que criamos um estilo visual que compreenda telas de até 480px.
+Design responsivo: como ajustar o estilo da nossa página de acordo com o tamanho da tela do dispositivo que a acesse
+Meta tag de Viewport
+Media Queries
