@@ -1,0 +1,216 @@
+display: inline
+
+Colocando display: inline nos elementos permite eles se posicionarem um do lado do outro, o problema do display: inline é que os elementos não aceitam mais que seja modificada tanto a width quanto a height. Isso limita MUITO nossas possibilidades.
+
+display: inline-block
+
+O display: inline-block permite os elementos se posicionarem um do lado do outro porém, diferentemente do display: inline ele permite que os elementos tenham sua width e height modificadas. Por esse motivo o display: inline-block é muito mais interessante na maioria dos casos do que o display: inline.
+
+O problema de usar display: inline-block é espaçar os elementos entre si. Para fazer isso teríamos que colocar margins e fazer contas.
+
+float: left | right
+
+O float é mais complicado, ele empurra o elemento para um dos lados (left | right) e os elementos que estão embaixo sobem. Isso nem sempre é o que a gente quer. Além do mais o float não permite que usemos a propriedade vertical-align: middle para alinhar os elementos verticalmente. Ou seja, para contornar isso uma possibilidade seria ter que colocar margin-top ou bottom nos elementos e usar os temidos números mágicos!
+
+display: flex
+
+O display: flex veio com o intuito de facilitar nossa vida nesses aspectos de posicionamento. Ele permite os elementos ficarem um do lado do outro, permite espaçar os elementos de forma mais intuitiva e sem ter que fazer cálculos. Além disso ele também permite alinhar os elementos verticalmente de forma fácil.
+
+O display flex pode ser um pouco mais complicado de usar tendo em vista que existem diversas propriedades que vem junto da especificação flexible box, todavia tudo isso foi feito para justamente melhorar nosso código.
+
+Agora que já tivemos essa introdução, vamos logo começar a organizar nosso site com flex (;
+-------------------------------------
+
+Vimos no primeiro exercício dessa aula que podemos espaçar os elementos que tem o pai com a propriedade display: flex de forma fácil.
+
+Veja o seguinte problema:
+
+<header class="cabecalho">
+  <a class="logo" href="#">
+    <img src="img/logo.png">
+  </a>
+
+  <ul class="menu">
+    <li class="menu-item">Item 1 do menu</li>
+    <li class="menu-item">Item 2 do menu</li>
+    <li class="menu-item">Item 3 do menu</li>
+    <li class="menu-item">Item 4 do menu</li>
+  </ul>
+</header>
+Como podemos fazer com que o menu fique do lado direito e o logo do lado esquerdo?
+
+VER OPINIÃO DO INSTRUTOR
+Opinião do instrutor
+
+Primeiro devemos colocar display: flex no pai, para isso fariamos:
+
+.cabecalho {
+  display: flex;
+}
+Agora automaticamente o .logo e o .menu ficam um do lado do outro.
+
+Dessa forma deve sobrar bastante espaço à direita deles. Para alocar todo esse espaço que está a direita para ficar entre eles devemos colocar a propriedade
+
+justify-content: space-between
+
+No .cabecalho, ou seja, no pai.
+
+O código para isso ficaria assim:
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+------------------------------------
+Bom, até agora conseguimos usar o flexbox para distribuir os elementos um do lado do outro e separá-los colocando espaço entre eles. A questão é que esses elementos podem ter alturas diferentes e dessa forma ficarem desalinhados verticalmente. Veja o seguinte código ( que é o mesmo do último exercício )
+
+<header class="cabecalho">
+  <a class="logo" href="#">
+    <img src="img/logo.png">
+  </a>
+
+  <ul class="menu">
+    <li class="menu-item">Item 1 do menu</li>
+    <li class="menu-item">Item 2 do menu</li>
+    <li class="menu-item">Item 3 do menu</li>
+    <li class="menu-item">Item 4 do menu</li>
+  </ul>
+</header>COPIAR CÓDIGO
+Bom, o css até agora está assim:
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}COPIAR CÓDIGO
+Tendo em vista tudo isso acima, como podemos alinhar os elementos (.menu e . logo) verticalmente?
+Devemos colocar align-items: center no pai, dessa forma todos os elementos ficam alinhados verticalmente no centro.
+
+O código ficaria assim:
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+align-items nós devemos colocar no pai. Dessa forma todos os seus filhos são afetados.
+
+A propriedade align-items faz com que os elementos dentro do pai que está com flex se alinhem verticalmente, portanto, pra eles ficarem alinhados no centro podemos usar align-items: center, colocando essa propriedade no pai dos elementos que queremos alinhar, no caso cabecalho.
+-----------------------------------------
+Sabemos que a propriedade justify-content: space-between faz com que o espaço que sobrou no nosso elemento pai seja distribuído entre os filhos, porém é claro que esse não é o único valor da propriedade justify-content. Por exemplo, de que outras formas podemos distribuir esse espaço?
+
+Qual o valor da propriedade justify-content para essas distribuições de espaço?
+
+VER OPINIÃO DO INSTRUTOR
+Opinião do instrutor
+
+Podemos distribuir os elementos dentro do pai de diversas formas, podemos por exemplo:
+
+Colocar todo espaço à esquerda, jogando o conteúdo para direita com justify-content: flex-end.
+
+Colocar todo espaço à direita, jogando o conteúdo para esquerda com justify-content: flex-start (que é o padrão).
+
+Colocar todo espaço à esquerda e à direita, jogando o conteúdo para o meio com justify-content: center.
+
+Colocar todo espaço entre os elementos como vimos antes usando justify-content: space-between.
+
+E uma possibilidade bem interessante também é colocar o espaço em volta dos elementos. Podemos usar o justify-content: space-around para isso.
+--------------------------------------
+O melhor a se fazer aqui é ter em mente que o ideal é sempre que necessário consultar a documentação através desse site.
+
+Lá podemos ver claramente quais propriedades são aplicadas ao container e aos flex items, não há necessidade de ficar decorando, isso virá naturalmente com a prática.
+
+Seguindo a documentação temos:
+
+container:
+
+display: flex
+flex-direction
+justify-content
+flex-wrap
+flex-flow
+align-items
+align-content
+flex item:
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+------------------------------------
+Digamos que temos dois flex items e que precisamos que um desses elementos ocupe todo o espaço que está sobrando do flex container. Como podemos fazer isso?
+Podemos usar a propriedade flex-grow. O código ficaria assim:
+
+.flex-item {
+  flex-grow: 1;
+}
+Para falar para um elemento / flex item crescer e ocupar todo o espaço que está sobrando dentro do flex container devemos usar a propriedade flex-grow.
+-----------------------------------
+Imagine que no nosso site temos um video do Youtube, imagine que mesmo se o usuário diminuir a tela, o nosso video não deva diminuir de tamanho. Como podemos fazer isso?
+Podemos simplesmente colocar a propriedade flex-shrink no elemento, por exemplo:
+
+.videoSobre-video {
+  flex-shrink: 0
+}
+
+Perfeito! Simplesmente colocamos flex-shrink: 0 no nosso elemento que não queremos que diminua.
+------------------------------------
+Considere o código HTML abaixo.
+
+<main class="flexContainer">        
+  <div class="flexItem firstRow"></div>
+  <div class="flexItem firstRow"></div>
+  <div class="flexItem firstRow"></div>
+  <div class="flexItem firstRow"></div>
+</main>COPIAR CÓDIGO
+Considere agora que estejamos em um contexto flex. E que cada flexItem tem 200 px de width.
+
+CSS
+
+.flexContainer {
+  display: flex;
+}
+.flexItem {
+  width: 200px;
+}COPIAR CÓDIGO
+1) Quando a largura da tela chega a 800 px, os elementos mantém 200 px de largura cada um preenchendo todo o espaço da tela, porém, o que acontece com a largura dos flexItem quando diminuímos a tela para por exemplo 600 px.
+
+2) O que acontece com a largura deles também quando aplicamos o seguinte CSS no nosso código?
+
+.flexItem:first-child {
+  flex-shrink: 2;
+}COPIAR CÓDIGO
+Sugestão: Crie um arquivo HTML e CSS, escreva esse código e faça os testes, utilize também valores diferentes!
+
+VER OPINIÃO DO INSTRUTOR
+Opinião do instrutor
+
+1) Quando diminuimos a tela para 600 px os flex-item diminuem seu tamanho igualmente entre si, ou seja, como a tela diminuiu 200 px e temos 4 flex items, cada um diminuiu 50 px. Sendo assim cada flex-item ficou com 150 px no fim.
+
+2) Quando colocamos flex-shrink: 2 no primeiro, ele diminui de forma diferente do que os outros elementos. As contas que ocorrem são semelhantes as que ocorrem no flex-grow.
+
+Primeiro de tudo o navegador pega o total de flex-shrink que nossos flex items tem, como temos por padrão flex-shrink: 1 nos flex items, a conta fica assim:
+
+2 + 1 + 1 + 1 = 5. Isso pois o primeiro colocamos flex-shrink:2.
+
+Como diminuímos 200 px do tamanho total, o navegador pega esse valor e divide pelo total de flex-shrink. Fica: 200 px : 5 = 40 px.
+
+Dessa forma o navegador tira 2 partes do primeiro elemento 200px - 80px = 120px e tira 1 parte dos demais, ou seja: 200 px - 40 px = 160 px.
+---------------------------------------------------
+A propriedade flex-basis serve para que?
+
+A propriedade flex-basis serve para definir uma largura para o elemento caso o flex container esteja com flex-direction: row.
+
+flex-basis: 500px;
+
+Alternativa correta.
+
+
+A propriedade flex-basis serve para definir uma altura para o elemento caso o flex container esteja com flex-direction: column.
+
+flex-basis: 500px;
+
+Alternativa correta.
+----------------------------------
