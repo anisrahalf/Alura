@@ -1,0 +1,61 @@
+Sempre começar do mobile depois tablet depois desktop
+
+REM é uma unidade relativa à propriedade font-size da tag <html>, portanto se a tag <html> tem 16px de font-size 1 REM é equivalente à 16px. EM é relativa à propriedade font-size da tag mãe, portanto se a tag mãe tiver um font-size de 16px 1 EM é equivalente à 16px.
+REM vem de “Root ephemeral” que em uma tradução técnica fica “variável à raiz”, ou seja, é variável em relação à propriedade font-size da tag raiz (HTML). EM vem de “ephemeral” que significa “variável”, e ela é variável à propriedade font-size da tag mãe.
+
+Quando vamos trabalhar com imagens, o formato SVG apresenta uma grande vantagem por ser leve e não perder qualidade quando ampliado por ser gerado por uma instrução de computador.
+Quando é recomendado usar imagens do tipo SVG?
+Em imagens simplificadas, ícones e logotipos.
+Essa opção está correta porque SVG não consegue manter detalhes de uma imagem complexa.
+Para saber mais sobre SVGs, você pode assistir nosso curso “Vetores e Animação com SVG”:
+https://cursos.alura.com.br/course/svg-css-animacao
+
+Estrutura declaração vars cores:
+--nome-da-variavel:valor;
+
+Variáveis CSS ajudam muito na manutenção do código e também facilitam o uso de propriedades de estilização.
+Como devem ser declaradas e usadas as variáveis CSS?
+Declaramos dentro de algum seletor (que costuma ser o :root {}) escrevendo --nome-da-variavel: valor, e chamamos as variáveis seguindo uma sintaxe, usamos uma função var e passando o nome da variável dentro dessa função.
+Essa alternativa está correta porque precisamos declarar variáveis CSS dentro de algum seletor. Para usar essas variáveis precisamos seguir a sintaxe: var(--nome-da-variavel)
+
+Vw= viewport width
+
+como colocar img no css: ex:
+.diferenciais__item--tempo {
+    background-image: url(../img/icone-relogio.png);
+
+
+Quando falamos de código semântico, estamos falando de escrever um código legível, com conteúdo bem descrito e bem estruturado.
+
+Quais as principais vantagens em escrevemos um código semântico?
+
+Alternativa correta
+Para atendermos aos requisitos de acessibilidade.
+
+Correto! Temos que deixar nossa página mais inclusiva possível e para isso precisamos utilizar todas as tags corretas para demarcar todo o conteúdo da página corretamente.
+Alternativa correta
+Para que outras pessoas desenvolvedoras possam entender.
+
+Correto! Temos que lembrar que o nosso código talvez precise passar por outras pessoas e elas precisam entender o que está acontecendo quando ler nosso código.
+Para ferramentas de indexação.
+
+Correto! Existem vários bots (ferramentas automáticas) que verificam todo o código do nosso projeto, e depois validam para mudar o posicionamento da nossa página nos resultados de motores de busca (ex: Google, Bing, Yahoo).
+
+Como fazer algo mudar de cor no css a partir de um certo tamanho:
+@media (min-width: 610px) {
+    .chamada {
+        background-color: #F0F;
+    }
+}
+
+As media queries permitem que criemos páginas com estilizações diferentes no mesmo arquivo CSS por várias condições diferentes como, por exemplo, largura da tela de um dispositivo.
+
+Depois que terminamos de desenvolver todo o layout da página na versão mobile, é hora de ir para o próximo passo que é o layout na versão tablet, que neste caso, começa a partir de 768px de largura. Para colocar toda a estilização, sem mudar a versão mobile, precisamos usar uma media query.
+
+Qual alternativa apresenta a sintaxe correta da media query necessária?
+
+Alternativa correta
+@media (min-width: 768px) { “estilização aqui” }
+Essa resposta está correta porque está com a condição “telas com largura a partir de 768px”.
+Para saber mais sobre breakpoints e valores genéricos para dispositivos (referência em inglês):
+https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
