@@ -1,0 +1,52 @@
+Quando o navegador criar uma representação deste documento em formato de objetos, queremos acessar o nó que representa o parágrafo e alterar seu texto de forma dinâmica para comprar um morango. Qual o código abaixo realiza essa tarefa?
+
+document.querySelector('p').textContent = 'comprar um morango'
+
+Alternativa Correta. Exatamente! Utilizamos querySelector para percorrer a árvore do DOM, através da propriedade textContent conseguimos acesso ao texto do parágrafo, e por fim, trocamos o texto.
+---------------------------------------
+Utilizamos o método querySelector para percorrer a árvore do DOM e encontrar o elemento que queremos utilizando JavaScript. Porém existem outros métodos que podem ser utilizados para o mesmo fim.
+
+document.getElementById(‘id’) seleciona o elemento pelo id passado.
+document.getElementsByClassName(‘classe’) retorna um array dos elementos pelo nome da classe passada.
+document.getElementsByTagName(‘tag’) retorna um array dos elementos pelo nome da tag passada
+document.querySelectorAll(seletor) devolve todos os seletores com o mesmo nome
+------------------------------------------
+Quais as três coisas que precisamos para utilizar um escutador de eventos?
+
+Alternativa correta
+Evento / Elemento que recebe o evento / O que vai acontecer quando o evento disparar
+
+
+Alternativa Correta. Exatamente! Precisamos do tipo do evento, do elemento que vai receber o evento e o que vai acontecer quando o evento for disparado
+-------------------------------------------
+Precisamos criar um template de um parágrafo que receba tanto conteúdo HTML e JavaScript, qual sintaxe resolve nosso problema?
+
+<p>${ }</p>
+
+
+Alternativa Correta. Exatamente! Além de utilizar o acento grave, precisamos utilizar a expressão ${ } que vai receber código JavaScript
+-----------------------------------------------
+Todos os elementos na nossa árvore do DOM são nós e todos os nós podem ser acessados via JavaScript. Os nós podem ser deletados, criados ou modificados. Durante o curso utilizamos o método appendChild que sempre é adicionado no final do nó, para colocar um nó filho dentro do nó pai
+
+Existem outros métodos que podemos utilizar para manipular nós:
+
+insertBefore(pai, filho): Coloca um nó antes do outro.
+replaceChild( elemento1, elemento2): Substitui o nó elemento 1 pelo nó elemento2.
+removeChild(elemento): Remove um nó da árvore.
+------------------------------------------------
+Para que a formatação de tarefa concluída seja aplicada no comprimento total do elemento, precisamos colocar essa classe CSS no elemento pai do parágrafo, ou seja na li. Qual opção correta para essa funcionalidade
+
+Alternativa correta
+const botaoConclui = evento.target
+
+const tarefaCompleta = botaoConclui.parentElement
+
+tarefaCompleta.classList.toggle('done')
+
+Alternativa Correta. Exatamente! Através da variável botaoConclui capturamos qual elemento foi clicado, depois utilizamos a propriedade parentElement para subir um nó na árvore, por fim colocamos o método toggle que vai adicionar a classe done quando clicarmos no botão
+---------------------------------------------------
+Quais as estratégias que utilizamos para aumentar a manutenção e legibilidade do código da nossa aplicação toda?
+Criar uma pasta para organizar os códigos, dar nomes que fazem sentido tanto para os arquivos quanto para as funções e componentes, utilizar import/export para criar comunicação entre os arquivos e garantir encapsulamento.
+
+
+Alternativa Correta. Exatamente! Todos essas alternativas foram feitas durante o desenvolvimento para garantir o futuro da nossa aplicação. Lembre-se, escrevemos códigos para outras pessoas.
